@@ -81,6 +81,9 @@ namespace HauntedPSX.RenderPipelines.PSX.Runtime
 
         [SerializeField]
         public PSXRenderPipelineResources renderPipelineResources;
+
+        // Fix for 2022.3 suggested by tjm from HSPS1 Community
+        public override string renderPipelineShaderTag => "PSXRenderPipeline";
         
         // TODO: Currently the SRP Batcher is forced off due to a D3D11 swap chain crash in HPSXRP.
         // Expose this option to users once the SRP Batcher stabilizes / once the engine is fixed.
